@@ -13,7 +13,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 script {
-                 app = docker.build('/snap/bin/docker build -t astor4ever/docker .')
+                 app = docker.build('-t astor4ever/docker .')
                 }
             }
         }
