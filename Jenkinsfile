@@ -13,7 +13,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 script {
-                 app = docker.build('-t astor4ever/docker .')
+                 '/snap/bin/docker build -t astor4ever/docker .'
                 }
             }
         }
@@ -21,7 +21,6 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://registry.hub.docker.com', 'test') {
-                        sh '/snap/bin/docker push ${BUILD_NUMBER}'
                         sh '/snap/bin/docker push latest'
                     }
                 }
