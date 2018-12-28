@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build Jar') {
             steps {
-                sh 'gradlew build -x test'
+                sh 'sh gradlew build -x test'
             }
         }
         stage('Build Image') {
