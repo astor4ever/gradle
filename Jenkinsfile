@@ -21,7 +21,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://registry.hub.docker.com', 'test') {
-                        sh '/snap/bin/docker push latest'
+                        sh '/snap/bin/docker push astor4ever/docker:latest'
                     }
                 }
             }
