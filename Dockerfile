@@ -12,4 +12,4 @@ ADD my_test.xml /usr/share/tag/order-module.xml
 # MODULE  = order-module / search-module
 # SELENIUM_HUB = selenium hub hostname / ipaddress
 
-ENTRYPOINT /usr/bin/java -cp /usr/share/tag/container-test.jar -DseleniumHubHost=$SELENIUM_HUB -Dbrowser=$BROWSER org.testng.TestNG /usr/share/tag/$MODULE
+ENTRYPOINT /usr/bin/java -cp /usr/share/tag/test.jar -DseleniumHubHost=$SELENIUM_HUB -Dbrowser=$BROWSER org.testng.TestNG /usr/share/tag/$MODULE
