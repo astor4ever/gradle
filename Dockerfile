@@ -7,7 +7,7 @@ WORKDIR /usr/share/tag
 ADD build/libs/test.jar /usr/share/tag/test.jar
 
 # Add the suite xmls
-ADD my_test.xml /usr/share/tag/my_test.xml
+ADD src/test/resources/my_test.xml /usr/share/tag/my_test.xml
 
 # Command line to execute the test
 # Expects below ennvironment variables
