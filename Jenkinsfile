@@ -20,7 +20,7 @@ pipeline {
         stage('Push Image') {
             steps {
                 script {
-                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
+                    docker.withRegistry('https://registry.hub.docker.com', 'test') {
                         sh '/snap/bin/docker push ${BUILD_NUMBER}'
                         sh '/snap/bin/docker push latest'
                     }
