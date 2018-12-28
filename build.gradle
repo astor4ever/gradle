@@ -1,0 +1,36 @@
+apply plugin: 'groovy'
+apply from: "webdriver.gradle"
+
+//plugins {
+//    id 'java'
+//}
+//group 'test'
+//version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+defaultTasks 'testChrome'
+
+dependencies {
+    testCompile 'org.testng:testng:6.9.10'
+    testCompile 'org.seleniumhq.selenium:selenium-chrome-driver:3.14.0'
+
+}
+
+test {
+
+    useTestNG()
+    testLogging {
+        exceptionFormat = 'full'
+    }
+
+    afterTest { desc, result ->
+        println "${desc.className} ${desc.name} ${result.resultType}"
+    }
+
+    outputs.upToDateWhen { false }
+}
