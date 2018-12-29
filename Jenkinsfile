@@ -17,14 +17,6 @@ pipeline {
                 }
             }
         }
-        stage('Push Image') {
-            steps {
-                script {
-                    docker.withRegistry('https://registry.hub.docker.com', 'test') {
-                        sh 'sh /snap/bin/docker push astor4ever/docker:latest'
-                    }
-                }
-            }
-        }
+
     }
 }
