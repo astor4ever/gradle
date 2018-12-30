@@ -10,7 +10,7 @@ apply from: "webdriver.gradle"
 sourceCompatibility = 1.8
 
 repositories {
-    mavenCentral()
+    jcenter()
 }
 
 defaultTasks 'testChrome'
