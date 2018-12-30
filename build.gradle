@@ -16,7 +16,7 @@ repositories {
 defaultTasks 'testChrome'
 
 dependencies {
-    testCompile 'org.testng:testng:6.9.10'
+    testCompile 'org.testng:testng:6.10'
     testCompile 'org.seleniumhq.selenium:selenium-chrome-driver:3.14.0'
 
 }
